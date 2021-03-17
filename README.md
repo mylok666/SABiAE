@@ -15,7 +15,8 @@ Download the ped2 and the avenue datasets.
 
 Modify dataset_path in Train.py, and then unzip the datasets under your data root.
 
-My trained model is in './exp/ped2/ped2e-4/model_196.000_0.00001_0.00002.pth'
+My trained model is in  [BaiduYun : njnu](https://pan.baidu.com/s/17wSpr_rkDQ8LGPc1xigKig )
+
 
 Train
 -----
@@ -25,4 +26,4 @@ python Train.py --dataset_type 'ped2' --dataset_path 'your_path' --epochs 200 --
 Eva
 ----
 
-python Eva.py --dataset_type 'ped2' --dataset_path 'yourpath' --exp_dir 'your exp dir' --model_dir './exp/ped2/ped2e-4/model_196.000_0.00001_0.00002.pth'
+python Eva.py --dataset_type 'ped2' --dataset_path 'yourpath' --exp_dir 'your exp dir' --model_dir './exp/ped2/ped2e-4/modelped2.pth'
