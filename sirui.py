@@ -198,8 +198,8 @@ class mymodel(nn.Module):
 
 def recons_loss(recon_x, x):
     # msssim 多尺度结构相似损失函数：基于多层（图片按照一定规则，由大到小缩放）的SSIM损失函数，相当于考虑了分辨率
-    '''为什么不用msssim?因为attention太大 我吧图尺寸缩到128 但是msssim最低要求160 不然不能完成四次下采样'''
-    #msssim = ((1-pytorch_msssim.ssim(x,recon_x)))/2   #一种优化过的ssim算法
+    
+    msssim = ((1-pytorch_msssim.msssim(x,recon_x)))/2   #一种优化过的ssim算法
     #ssim = ((1-pytorch_msssim.ssim(x,recon_x)))/2
     #作者结合神经科学的研究，认为我们人类衡量两幅图的距离时，
     # 更偏重于两图的结构相似性，而不是逐像素计算两图的差异。因此作者提出了基于 structural similarity 的度量，声称其比 MSE 更能反映人类视觉系统对两幅图相似性的判断。
@@ -208,7 +208,7 @@ def recons_loss(recon_x, x):
     #论文证明 MS-SSIM+L1损失函数是最好的
     #作者这样组合的原因是，MS-SSIM容易导致亮度的改变和颜色的偏差，但它能保留高频信息（图像的边缘和细节），
     # 而L1损失函数能较好的保持亮度和颜色不变化。公式中α为0.84，是作者试验出来的，而G为高斯分布参数（MS-SSIM里面也要用到这个） Lmix = α*Lmsssim + (1-α)*G*L1  G是高斯分布函数
-    return f1
+    return f1+msssim
     #return f1
 
 
