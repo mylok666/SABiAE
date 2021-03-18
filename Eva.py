@@ -1,4 +1,4 @@
-'''一个用来处理公共文件夹下的 拷贝自 Evaluate.py函数 '''
+'''for evaluate '''
 import numpy as np
 import os
 import sys
@@ -30,7 +30,7 @@ import argparse
 from utils import DataLoader
 from sirui import recons_loss
 #from Train import log_dir
-parser = argparse.ArgumentParser(description="MNAD")
+parser = argparse.ArgumentParser(description="NNU202")
 parser.add_argument('--gpus', nargs='+', type=str, help='gpus')
 parser.add_argument('--batch_size', type=int, default=4, help='batch size for training')
 parser.add_argument('--test_batch_size', type=int, default=1, help='batch size for test')
