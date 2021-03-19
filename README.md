@@ -1,5 +1,5 @@
 # SABiAE
-Pytorch implementation of my second paper：Self Attention based Bi-directional Long Short-Term Memory Auto Encoder.
+Pytorch implementation of my second paper：Self Attention based Bi-directional Long Short-Term Memory Auto Encoder for video anomaly detection.
 
 This implementation used Nonlocal module.
 
