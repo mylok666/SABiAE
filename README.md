@@ -6,7 +6,7 @@ This implementation used Nonlocal module.
 I only trained the ped2 and avenue datasets,the results:
 method    |  ped2   |  avenue
 :-----  |-------: |:----:
-SABiAE    | 95.6    |  84.2
+SABiAE    | 95.6    |  84.7
 
 **Prepare**
 -----------
